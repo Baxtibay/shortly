@@ -1,8 +1,11 @@
 :root {
   --green: #2bd0d0;
   --violet: #4b3f6b;
-  --dark-black: #34313d;
+  --dark-violet: #3a3054;
+  --black: #34313d;
   --gray: #34313d;
+  --dark-gray: #9e9aa8;
+  --light-gray: #eff1f7;
 }
 /* GLOBAL */
 html {
@@ -27,7 +30,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   background-color: #fff;
-  color: var(--dark-black);
+  color: var(--black);
 }
 
 img {
