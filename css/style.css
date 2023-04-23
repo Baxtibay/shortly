@@ -246,3 +246,30 @@ img {
   font-size: 22px;
   line-height: 36px;
 }
+
+
+/* URL-FORM  */
+.url-form {
+  position: relative;
+  left: 0;
+  bottom: 84px;
+}
+
+.url-form__form {
+  display: flex;
+  max-width: 1110px;
+  padding: 52px 67px;
+  background-color: var(--text-color-dark);
+  border-radius: 5px;
+  background-image: url("../img/graphic-small.svg"), url("../img/graphic-small.svg");
+  background-repeat: no-repeat;
+  background-position: top 30px left -134px, top -184px right -250px;
+}
+
+.url-form__input {
+  flex-grow: 1;
+  height: 64px;
+  border-radius: 5px;
+  border: 0;
+  margin-right: 20px;
+}
