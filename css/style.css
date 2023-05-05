@@ -72,6 +72,29 @@ img {
 }
 
 
+/* PLACEHOLDER-STYLES */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}
+
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /* CONTAINER  */
 .container {
   width: 100%;
@@ -97,6 +120,7 @@ img {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .button:hover {
@@ -248,28 +272,69 @@ img {
 }
 
 
-/* URL-FORM  */
-.url-form {
-  position: relative;
-  left: 0;
-  bottom: 84px;
-}
 
-.url-form__form {
+
+/* INDEX-URL-SHORTENER-FEATURES-WRAPPER */
+.index-url-shortener-features-wrapper {
   display: flex;
-  max-width: 1110px;
-  padding: 52px 67px;
-  background-color: var(--text-color-dark);
-  border-radius: 5px;
-  background-image: url("../img/graphic-small.svg"), url("../img/graphic-small.svg");
-  background-repeat: no-repeat;
-  background-position: top 30px left -134px, top -184px right -250px;
+  flex-direction: column;
+  background-color: var(--light-bg);
 }
 
-.url-form__input {
+.index-url-shortener-features-wrapper__url-shortener {
+  margin-top: -84px;
+}
+
+
+/* URL-SHORTENER */
+.url-shortener__form {
+  padding: 48px 64px;
+  display: flex;
+  border-radius: 10px;
+  background-color: #4b3f6b;
+  background-image: url("../img/purple-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.url-shortener__input-wrapper {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  height: 64px;
-  border-radius: 5px;
-  border: 0;
-  margin-right: 20px;
+  position: relative;
+  margin-right: 24px;
+}
+
+.url-shortener__input {
+  flex-grow: 1;
+  display: block;
+  width: 100%;
+  padding: 14px 32px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 36px;
+  color: var(--text-color-dark);
+}
+
+.url-shortener__input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--error-color);
+  color: rgba(244, 99, 99, 0.5);
+}
+
+.url-shortener__error-msg {
+  display: none;
+}
+
+.url-shortener__input:not(:focus):not(:placeholder-shown):invalid ~ .url-shortener__error-msg {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--error-color);
+  letter-spacing: 0.11px;
 }
